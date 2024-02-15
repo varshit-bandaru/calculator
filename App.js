@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, StyleSheet, Button } from 'react-native';
 import CalculatorScreen from './screen/CalculatorScreen';
+import LoginScreen from './screen/LoginScreen';
 
 export default function App() {
   const [username, setUsername] = useState('');
@@ -14,22 +15,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <LoginScreen></LoginScreen>
       <CalculatorScreen></CalculatorScreen>
-    {/* <TextInput
-      style={styles.input}
-      placeholder="Username"
-      onChangeText={(text) => setUsername(text)}
-    />
-    <TextInput
-      style={styles.input}
-      placeholder="Password"
-      secureTextEntry
-      onChangeText={(text) => setPassword(text)}
-    />
-    <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
-      <Text style={styles.loginButtonText}>Login</Text>
-    </TouchableOpacity> */}
-  </View>
+    </View>
   );
 }
 
@@ -37,29 +25,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    // backgroundColor:"black",
     justifyContent: 'center',
-    // alignItems: 'center',
+    alignItems: 'center',
     padding: 16,
   },
-  input: {
-    height: 40,
-    width: '100%',
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginBottom: 16,
-    paddingLeft: 8,
-  },
-  loginButton: {
-    backgroundColor: 'blue',
-    padding: 12,
-    borderRadius: 8,
-    width: '100%',
-    alignItems: 'center',
-  },
-  loginButtonText: {
-    color: 'white',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
+
 });
 
