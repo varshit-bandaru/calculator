@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import CalculatorScreen from './screen/CalculatorScreen';
 
 export default function App() {
   const [username, setUsername] = useState('');
@@ -13,7 +14,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-    <TextInput
+      <CalculatorScreen></CalculatorScreen>
+    {/* <TextInput
       style={styles.input}
       placeholder="Username"
       onChangeText={(text) => setUsername(text)}
@@ -26,7 +28,7 @@ export default function App() {
     />
     <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
       <Text style={styles.loginButtonText}>Login</Text>
-    </TouchableOpacity>
+    </TouchableOpacity> */}
   </View>
   );
 }
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
+    // alignItems: 'center',
     padding: 16,
   },
   input: {
