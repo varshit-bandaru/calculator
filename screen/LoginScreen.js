@@ -2,12 +2,15 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Button } from 'react-native';
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
     // Implement your login logic here
+    if(username=="varshit" && password=="varshit"){
+      navigation.navigate('Calculator',{name:"varshit"})
+    }
     console.log('Logging in with:', { username, password });
   };
 
