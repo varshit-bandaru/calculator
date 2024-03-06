@@ -5,6 +5,7 @@ import CalculatorScreen from "./screen/CalculatorScreen";
 import LoginScreen from "./screen/LoginScreen";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
+import BlogScreen from "./screen/Blog";
 const Drawer = createDrawerNavigator();
 
 export default function App() {
@@ -27,6 +28,11 @@ export default function App() {
           <Drawer.Screen
             name="Calculator"
             component={CalculatorScreen}
+          ></Drawer.Screen>
+
+        <Drawer.Screen
+            name="Blogs"
+            component={BlogScreen}
           ></Drawer.Screen>
         </Drawer.Navigator>
       </NavigationContainer>
