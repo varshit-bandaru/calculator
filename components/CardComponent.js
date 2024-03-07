@@ -1,9 +1,14 @@
 import React from 'react'
-import { View } from 'react-native'
+import { Text, View } from 'react-native'
+import {data} from '../data/BlogsData'
 
-function CardComponent() {
+function CardComponent({bolgsData}) {
+    console.log(bolgsData)
   return (
-    <View>CardComponent</View>
+    <View>
+       
+        <Text> CardComponent</Text>
+    </View>
   )
 }
 
