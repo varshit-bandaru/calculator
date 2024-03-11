@@ -15,7 +15,7 @@ export default function App() {
   return (
     <>
       <NavigationContainer>
-        <Drawer.Navigator drawerType="front" initialRouteName="Login">
+        <Drawer.Navigator initialRouteName="Login">
           <Drawer.Screen
             name="Login"
             component={LoginScreen}
@@ -30,7 +30,7 @@ export default function App() {
             component={CalculatorScreen}
           ></Drawer.Screen>
 
-        <Drawer.Screen
+          <Drawer.Screen
             name="Blogs"
             component={BlogScreen}
           ></Drawer.Screen>
