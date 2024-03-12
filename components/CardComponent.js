@@ -2,13 +2,17 @@ import React from "react";
 import { FlatList, SafeAreaView, Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 function CardComponent({ bolgsData }) {
-  const navaigation=useNavigation()
+  const navigation=useNavigation()
  
   function cardRender( data ) {
     console.log(data)
     const blog=data.item
     return (
-      <TouchableOpacity onPress={()=>{navaigation.navigate("Login")}}>
+      <TouchableOpacity onPress={()=>{navigation.navigate("Blog Detail Page", {
+        screen: 'BlogScreen' ,
+        params:{id: blog.id}
+      }
+    )}}>
       <View
         style={[
           styles.cardContainer,
