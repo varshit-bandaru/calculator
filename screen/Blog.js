@@ -1,12 +1,14 @@
 import * as React from "react";
-import { View, Text, SafeAreaView, StyleSheet } from "react-native";
+import { View, Text, SafeAreaView, StyleSheet, StatusBar } from "react-native";
 import CardComponent from "../components/CardComponent";
+
 import { data } from "../data/BlogsData";
 
 export default function BlogScreen() {
   return (
     <SafeAreaView style={style.blogsContainer}>
       {/* Your content goes here */}
+      <StatusBar hidden={true}></StatusBar>
 
       <CardComponent bolgsData={data}></CardComponent>
 
@@ -21,6 +23,6 @@ const style = StyleSheet.create({
     justifyContent: "center",
     paddingTop: 10,
     paddingHorizontal: 15,
-    backgroundColor:"black"
+    backgroundColor: "black",
   },
 });

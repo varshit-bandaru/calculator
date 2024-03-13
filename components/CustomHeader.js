@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
       height: 60, // Set the height to match the default header height
     },
     backButton: {
-      padding: 16, 
-    //   backgroundColor:"white"// Adjust padding as needed
+      paddingHorizontal:6,
+      paddingTop:25
     },
     headerTitle: {
       marginLeft: 10,
